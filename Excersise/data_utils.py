@@ -10,7 +10,7 @@ def plot_missing_values(data_f ):
  #If there are missing values, plot them
     if not missing_v.empty:
         plt.figure(figsize=(10, 5))
-        sns.barplot(x=missing_v.index, y=missing_v.values , palette='viridis')
+        sns.barplot(x=missing_v.index, y=missing_v.values , palette='viridis' ,  hue=missing_v.index)
         plt.xticks(ha='center')
         plt.title('Missing Values per Column')
         plt.xlabel('Columns')
